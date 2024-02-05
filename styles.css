@@ -1,0 +1,82 @@
+/* Grayscale Color Variables */
+:root {
+    --clr-primary: #000000; /* Black */
+    --clr-secondary: #333333; /* Dark Grey */
+    --clr-accent: #333333; /* Dark Grey */
+    --clr-light: #F2F2F2; /* Very Light Grey */
+    --clr-white: #FFFFFF; /* White */
+
+    /* Additional Grayscale Variables */
+    --clr-dark: #1A1A1A; /* Darker Grey */
+    --clr-medium: #666666; /* Medium Grey */
+    --clr-muted: #999999; /* Muted Grey */
+    --clr-border: #CCCCCC; /* Border Grey */
+    --clr-shadow: #E0E0E0; /* Shadow Grey */
+    --clr-highlight: #FAFAFA; /* Highlight Grey */
+
+    /* Additional Vibrant Color Variables */
+    --clr-primary-accent: #007BFF; /* Bright Blue for actions and links */
+    --clr-success: #28A745; /* Green for success messages and icons */
+    --clr-info: #17A2B8; /* Light Blue for informational messages */
+    --clr-warning: #FFC107; /* Yellow for warnings and caution messages */
+    --clr-danger: #DC3545; /* Red for errors and dangerous actions */
+    --clr-special: #6C757D; /* Special Grey for less important text */
+}
+
+/* Example Usage */
+.btn-primary {
+    background-color: var(--clr-primary-accent);
+    color: var(--clr-white);
+}
+
+.alert-success {
+    background-color: var(--clr-success);
+    color: var(--clr-white);
+}
+
+.alert-info {
+    background-color: var(--clr-info);
+    color: var(--clr-white);
+}
+
+.alert-warning {
+    background-color: var(--clr-warning);
+    color: var(--clr-dark);
+}
+
+.alert-danger {
+    background-color: var(--clr-danger);
+    color: var(--clr-white);
+}
+
+.text-special {
+    color: var(--clr-special);
+}
+
+/* CSS Reset including Border Box Fix */
+*{
+  box-sizing: border-box; 
+  margin: 0; 
+  padding: 0; 
+}
+
+/* Specific Element Margin Resets */
+body,
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+h6,
+p,
+figure,
+picture {
+  margin: 0; 
+}
+
+/* Removing Padding from Lists */
+ul,
+ol 
+li {
+  padding: 0; 
+}
