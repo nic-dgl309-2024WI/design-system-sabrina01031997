@@ -1,0 +1,92 @@
+/* BEM Naming Convention and Color Variables */
+
+/* Color Variables */
+:root {
+    --clr-primary: #000000; /* Black */
+    --clr-secondary: #333333; /* Dark Grey */
+    --clr-accent: #333333; /* Dark Grey */
+    --clr-light: #F2F2F2; /* Very Light Grey */
+    --clr-white: #FFFFFF; /* White */
+
+    /* Additional Grayscale Variables */
+    --clr-dark: #1A1A1A; /* Darker Grey */
+    --clr-medium: #666666; /* Medium Grey */
+    --clr-muted: #999999; /* Muted Grey */
+    --clr-border: #CCCCCC; /* Border Grey */
+    --clr-shadow: #E0E0E0; /* Shadow Grey */
+    --clr-highlight: #FAFAFA; /* Highlight Grey */
+
+    /* Additional Vibrant Color Variables */
+    --clr-primary-accent: #007BFF; /* Bright Blue for actions and links */
+    --clr-success: #28A745; /* Green for success messages and icons */
+    --clr-info: #17A2B8; /* Light Blue for informational messages */
+    --clr-warning: #FFC107; /* Yellow for warnings and caution messages */
+    --clr-danger: #DC3545; /* Red for errors and dangerous actions */
+    --clr-special: #6C757D; /* Special Grey for less important text */
+}
+
+/* Navbar Styles */
+.navbar {
+    /* Styles for navbar */
+    background-color: var(--clr-white);
+    border-bottom: 1px solid var(--clr-light);
+}
+
+/* Navbar Logo Text instead of image */
+.navbar__logo-text {
+    display: none; 
+    font-size: 1.5rem;
+    color: var(--clr-text-primary);
+}
+
+/* Navbar Hamburger Icon */
+.navbar__hamburger {
+    display: none; 
+    cursor: pointer;
+}
+
+/* Navbar Hover State */
+.navbar__item:hover {
+    background-color: var(--clr-light);
+}
+
+/* Navbar Active State */
+.navbar__item--active {
+    color: var(--clr-accent);
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    /* Mobile styles */
+
+    /* Display Logo Text in Mobile View */
+    .navbar__logo-text {
+        display: block;
+    }
+
+    /* Display Hamburger Icon in Mobile View */
+    .navbar__hamburger {
+        display: block;
+    }
+
+    /* Sidebar hidden in mobile view by default */
+    .sidebar {
+        position: absolute;
+        left: -250px; /* Hide off-screen */
+        transition: left 0.3s;
+    }
+
+    /* Sidebar visible when hamburger is open */
+    .sidebar--is-open {
+        left: 0; /* Show sidebar */
+    }
+}
+
+/* Hover and Active States for Sidebar */
+.sidebar__link:hover {
+    text-decoration: underline;
+}
+
+.sidebar__link--active {
+    color: var(--clr-accent);
+}
