@@ -109,7 +109,7 @@
 .sidebar__list {
     list-style-type: none;
     font-size: 20px; 
-    margin-bottom: 1em;/* This removes the bullet points */
+    margin-bottom: 1em;
 }
 
 /* Styles for the main content area */
@@ -124,36 +124,60 @@
 }
 
 /* Responsive Design for Mobile */
-/* Show hamburger menu on mobile */
+/* Hamburger menu on mobile */
 @media (max-width: 768px) {
     .navbar__hamburger {
         display: block;
     }
 
-    /* Off-canvas sidebar for mobile */
+    .navbar__menu {
+        display: none; /* Hide the menu in the navbar */
+    }
+
     .sidebar {
         position: fixed;
         left: -250px;
-        transition: left 0.3s;  
+        line-height: 19.5px;
+        transition: left 0.3s;
+        z-index: 100; /* High z-index to ensure the sidebar is above other content */
+    }
+
+    .sidebar.open .navbar__menu {
+        display: flex;
+        flex-direction: column; 
+        position: absolute; 
+        top: 0; 
+        left: 0; 
+        width: 100%; 
+        background-color: var(--clr-shadow); 
+    }
+    /* Adjust padding as needed */
+    .sidebar.open .navbar__menu .navbar__menu-link {
+        padding: 0.5em 1em; 
     }
     
-    /* Removes the bullet points */
-    .sidebar__list {
-        list-style-type: none; 
-    }
-    
-    /* Open state for the sidebar */
+    /* Show the sidebar */
     .sidebar.open {
         left: 0; 
     }
 
-     /* Remove margin for main content on mobile */
+    /* Remove margin for main content on mobile */
     .main-content {
         margin-left: 0;
-       
+    }
+
+    .sidebar__close-button {
+        display: none; /* Hide by default */
     }
     
+    .sidebar.open .sidebar__close-button {
+        display: block; /* When the sidebar is open */
+
+    }
 }
+
+
+
 
 
 
