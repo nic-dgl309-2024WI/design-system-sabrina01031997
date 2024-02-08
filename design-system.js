@@ -1,17 +1,14 @@
 function toggleSidebar() {
-    var sidebar = document.querySelector(".sidebar");
-    var mobileNav = document.querySelector(".mobile-navbar");
-    var hamburger = document.getElementById("hamburger");
+    var sidebar = document.getElementById("sidebar");
+    var hamburgerIcon = document.getElementById("hamburger").querySelector(".fa");
 
-    if (sidebar.style.left === "0px") {
-        sidebar.style.left = "-250px";
-        mobileNav.style.display = "none";
-        hamburger.classList.remove("fa-times");
-        hamburger.classList.add("fa-bars");
+    // Toggle the 'open' class on the sidebar
+    sidebar.classList.toggle("open");
+
+    // Toggle the hamburger icon class between 'fa-bars' and 'fa-times'
+    if (hamburgerIcon.classList.contains("fa-bars")) {
+        hamburgerIcon.classList.replace("fa-bars", "fa-times");
     } else {
-        sidebar.style.left = "0";
-        mobileNav.style.display = "block";
-        hamburger.classList.remove("fa-bars");
-        hamburger.classList.add("fa-times");
+        hamburgerIcon.classList.replace("fa-times", "fa-bars");
     }
 }

@@ -1,5 +1,3 @@
-/* BEM Naming Convention and Color Variables */
-
 /* Color Variables */
 :root {
     --clr-primary: #000000; /* Black */
@@ -25,68 +23,138 @@
     --clr-special: #6C757D; /* Special Grey for less important text */
 }
 
-/* Navbar Styles */
+/* BEM Naming and Namespacing for CSS Classes */
+/* Styles for the top navigation bar */
 .navbar {
-    /* Styles for navbar */
-    background-color: var(--clr-white);
-    border-bottom: 1px solid var(--clr-light);
+    background-color: var(--clr-shadow); /* Light grey for the navbar background */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;   
 }
 
-/* Navbar Logo Text instead of image */
-.navbar__logo-text {
-    display: none; 
-    font-size: 1.5rem;
-    color: var(--clr-text-primary);
+/* Styles for the brand link */
+.navbar__brand-link {
+    color: var(--clr-primary); /* Black for text */
+    text-decoration: none;
+    font-weight: bold; 
+    font-size: 1.5em;
+    margin-left: 0;   
 }
 
-/* Navbar Hamburger Icon */
+.navbar__menu {
+    display: flex;
+}
+
+
+/* Styles for menu links */
+.navbar__menu-link {
+    color: var(--clr-dark);
+    text-decoration: none;
+    padding: 0.5em 1em;
+    font-size: 20px;  
+}
+
+/* Hover state for menu links */
+.navbar__menu-link:hover {
+    background-color: var(--clr-primary-accent); /* Bright blue background on hover */
+    color: var(--clr-white); /* White text on hover */  
+}
+
+/* Active state to indicate the current page */
+.navbar__menu-link--active {
+    color: var(--clr-dark);
+    font-size: 20px;  
+}
+
+/* Hamburger icon for mobile view */
 .navbar__hamburger {
     display: none; 
-    cursor: pointer;
 }
 
-/* Navbar Hover State */
-.navbar__item:hover {
-    background-color: var(--clr-light);
+ /* Styles for the sidebar */
+.sidebar {
+    background-color: var(--clr-shadow); /* Light grey to mimic the sidebar */
+    width: 250px;
+    padding: 1em;
+    height: 100vh;
+    overflow-y: auto;   
 }
 
-/* Navbar Active State */
-.navbar__item--active {
-    color: var(--clr-accent);
+/* Margin for each section in the sidebar */
+.sidebar__section {
+    margin-bottom: 1em;  
 }
 
-/* Responsive Styles */
-@media screen and (max-width: 768px) {
-    /* Mobile styles */
+/*Styles for headings in the sidebar */
+.sidebar__heading {
+    font-size: 20px;
+    margin-bottom:1em;  
+}
 
-    /* Display Logo Text in Mobile View */
-    .navbar__logo-text {
-        display: block;
-    }
+/* Styles for links in the sidebar */
+.sidebar__link {
+    color: var(--clr-dark);
+    text-decoration: none;
+    display: block;
+    padding: 0;  
+}
 
-    /* Display Hamburger Icon in Mobile View */
+/* Hover state for sidebar links */
+.sidebar__link:hover {
+    color: var(--clr-primary-accent);    
+}
+
+/* Remove markers (bullets) from list items in the sidebar */
+.sidebar__list {
+    list-style-type: none;
+    font-size: 20px; 
+    margin-bottom: 1em;/* This removes the bullet points */
+}
+
+/* Styles for the main content area */
+.main-content {
+    margin-left: 250px; /* Space for the sidebar */
+    padding: 2em;
+}
+
+.main-content, .sidebar {
+    max-height: 100vh; /* Set maximum height to viewport height */
+    overflow-y: hidden; /* Hide vertical scrollbar */
+}
+
+/* Responsive Design for Mobile */
+/* Show hamburger menu on mobile */
+@media (max-width: 768px) {
     .navbar__hamburger {
         display: block;
     }
 
-    /* Sidebar hidden in mobile view by default */
+    /* Off-canvas sidebar for mobile */
     .sidebar {
-        position: absolute;
-        left: -250px; /* Hide off-screen */
-        transition: left 0.3s;
+        position: fixed;
+        left: -250px;
+        transition: left 0.3s;  
+    }
+    
+    /* Removes the bullet points */
+    .sidebar__list {
+        list-style-type: none; 
+    }
+    
+    /* Open state for the sidebar */
+    .sidebar.open {
+        left: 0; 
     }
 
-    /* Sidebar visible when hamburger is open */
-    .sidebar--is-open {
-        left: 0; /* Show sidebar */
+     /* Remove margin for main content on mobile */
+    .main-content {
+        margin-left: 0;
+       
     }
+    
 }
 
-/* Hover and Active States for Sidebar */
-.sidebar__link:hover {
-    text-decoration: underline;
-}
 
-.sidebar__link--active {
-    color: var(--clr-accent);
-}
+
+
