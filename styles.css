@@ -1,12 +1,13 @@
-/* Grayscale Color Variables */
+/* Color Variables with Adjustments for Accessibility */
 :root {
+    /* Primary and Secondary Colors with Adjusted Tones for Accessibility */
     --clr-primary: #000000; /* Black */
-    --clr-secondary: #333333; /* Dark Grey */
-    --clr-accent: #333333; /* Dark Grey */
+    --clr-secondary: #4D4D4D; /* Adjusted Dark Grey for better contrast */
+    --clr-accent: #0056b3; /* Adjusted to ensure accessibility */
+
+    /* Grayscale Tones */
     --clr-light: #F2F2F2; /* Very Light Grey */
     --clr-white: #FFFFFF; /* White */
-
-    /* Additional Grayscale Variables */
     --clr-dark: #1A1A1A; /* Darker Grey */
     --clr-medium: #666666; /* Medium Grey */
     --clr-muted: #999999; /* Muted Grey */
@@ -14,44 +15,44 @@
     --clr-shadow: #E0E0E0; /* Shadow Grey */
     --clr-highlight: #FAFAFA; /* Highlight Grey */
 
-    /* Additional Vibrant Color Variables */
-    --clr-primary-accent: #007BFF; /* Bright Blue for actions and links */
-    --clr-success: #28A745; /* Green for success messages and icons */
-    --clr-info: #17A2B8; /* Light Blue for informational messages */
-    --clr-warning: #FFC107; /* Yellow for warnings and caution messages */
-    --clr-danger: #DC3545; /* Red for errors and dangerous actions */
-    --clr-special: #6C757D; /* Special Grey for less important text */
+    /* Vibrant Color Variables for UI Feedback */
+    --clr-primary-accent: #007BFF; /* Bright Blue */
+    --clr-success: #28A745; /* Green */
+    --clr-info: #17A2B8; /* Light Blue */
+    --clr-warning: #FFC107; /* Yellow */
+    --clr-danger: #DC3545; /* Red */
+    --clr-special: #6C757D; /* Special Grey */
+
+    /* Tonal Variations */
+    --clr-primary-100: #333333; /* Lighter version of Black */
+    --clr-primary-700: #000000; /* Darker version for high contrast */
+    --clr-accent-100: #3367D6; /* Lighter version of Accent */
+    --clr-accent-700: #0044b3; /* Darker version of Accent */
 }
 
-/* Example Usage */
-.btn-primary {
-    background-color: var(--clr-primary-accent);
-    color: var(--clr-white);
-}
+/* Utility Classes for Colors and Backgrounds */
+.text-primary { color: var(--clr-primary); }
+.bg-primary { background-color: var(--clr-primary); }
 
-.alert-success {
-    background-color: var(--clr-success);
-    color: var(--clr-white);
-}
+.text-secondary { color: var(--clr-secondary); }
+.bg-secondary { background-color: var(--clr-secondary); }
 
-.alert-info {
-    background-color: var(--clr-info);
-    color: var(--clr-white);
-}
+.text-accent { color: var(--clr-accent); }
+.bg-accent { background-color: var(--clr-accent); }
 
-.alert-warning {
-    background-color: var(--clr-warning);
-    color: var(--clr-dark);
-}
+.text-primary-100 { color: var(--clr-primary-100); }
+.bg-primary-100 { background-color: var(--clr-primary-100); }
 
-.alert-danger {
-    background-color: var(--clr-danger);
-    color: var(--clr-white);
-}
+.text-accent-100 { color: var(--clr-accent-100); }
+.bg-accent-100 { background-color: var(--clr-accent-100); }
 
-.text-special {
-    color: var(--clr-special);
-}
+/* Vibrant Colors for UI Feedback */
+.btn-primary { background-color: var(--clr-primary-accent); color: var(--clr-white); }
+.alert-success { background-color: var(--clr-success); color: var(--clr-white); }
+.alert-info { background-color: var(--clr-info); color: var(--clr-white); }
+.alert-warning { background-color: var(--clr-warning); color: var(--clr-dark); }
+.alert-danger { background-color: var(--clr-danger); color: var(--clr-white); }
+.text-special { color: var(--clr-special); }
 
 /* CSS Reset including Border Box Fix */
 *{
