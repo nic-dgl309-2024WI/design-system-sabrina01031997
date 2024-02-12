@@ -6,7 +6,7 @@
     --clr-accent: #0056b3; /* Adjusted to ensure accessibility */
 
     /* Grayscale Tones */
-    --clr-light: #F2F2F2; /* Very Light Grey */
+    --clr-light: #C2C2C2; /* Very Light Grey */
     --clr-white: #FFFFFF; /* White */
     --clr-dark: #1A1A1A; /* Darker Grey */
     --clr-medium: #666666; /* Medium Grey */
@@ -16,35 +16,35 @@
     --clr-highlight: #FAFAFA; /* Highlight Grey */
 
     /* Vibrant Color Variables for UI Feedback */
-    --clr-primary-accent: #007BFF; /* Bright Blue */
-    --clr-success: #28A745; /* Green */
-    --clr-info: #17A2B8; /* Light Blue */
+    --clr-primary-accent: #0056B3; /* Bright Blue */
+    --clr-success: #186329; /* Green */
+    --clr-info: #0E606C; /* Light Blue */
     --clr-warning: #FFC107; /* Yellow */
-    --clr-danger: #DC3545; /* Red */
+    --clr-danger: #A91E2C; /* Red */
     --clr-special: #6C757D; /* Special Grey */
 
     /* Tonal Variations */
     --clr-primary-100: #333333; /* Lighter version of Black */
     --clr-primary-700: #000000; /* Darker version for high contrast */
     --clr-accent-100: #3367D6; /* Lighter version of Accent */
-    --clr-accent-700: #0044b3; /* Darker version of Accent */
+    --clr-accent-700: #234FAF; /* Darker version of Accent */
 }
 
 /* Utility Classes for Colors and Backgrounds */
 .text-primary { color: var(--clr-primary); }
-.bg-primary { background-color: var(--clr-primary); }
+.bg-primary { background-color: var(--clr-white); }
 
 .text-secondary { color: var(--clr-secondary); }
-.bg-secondary { background-color: var(--clr-secondary); }
+.bg-secondary { background-color: var(--clr-light); }
 
 .text-accent { color: var(--clr-accent); }
-.bg-accent { background-color: var(--clr-accent); }
+.bg-accent { background-color: var(--clr-white); }
 
 .text-primary-100 { color: var(--clr-primary-100); }
-.bg-primary-100 { background-color: var(--clr-primary-100); }
+.bg-primary-100 { background-color: var(--clr-light); }
 
 .text-accent-100 { color: var(--clr-accent-100); }
-.bg-accent-100 { background-color: var(--clr-accent-100); }
+.bg-accent-100 { background-color: var(--clr-highlight); }
 
 /* Vibrant Colors for UI Feedback */
 .btn-primary { background-color: var(--clr-primary-accent); color: var(--clr-white); }
