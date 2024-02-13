@@ -104,7 +104,8 @@
     width: 250px;
     padding: 1em;
     height: 100vh;
-    overflow-y: auto;   
+    overflow-y: auto;
+    float: left;   
 }
 
 /* Margin for each section in the sidebar */
@@ -141,6 +142,7 @@
 /* Styles for the main content area */
 .main-content {
     margin-left: 250px; /* Space for the sidebar */
+    margin-top: o;
     padding: 2em;
 }
 
@@ -150,7 +152,6 @@
 }
 
 /*-------- Styles for color swatches for the page Colours.html--------*/
-
 .color-swatches {
     margin-top: 2em; /* Adjust margin as needed */
 }
