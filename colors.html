@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design System Template</title>
+    <!-- Link of CSS files -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="design-system.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <!-- Top Navbar -->
+    <header class="navbar">
+        <div class="navbar__brand">
+            <a href="index.html" class="navbar__brand-link">Design System</a>
+        </div>
+        <div class="navbar__menu" id="navbarMenu">
+            <a href="about-me.html" class="navbar__menu-link">About Me</a>
+            <a href="#" class="navbar__menu-link navbar__menu-link--active">Demo Site</a>
+        </div>
+        <!-- Hamburger button for mobile navbar -->
+        <button class="navbar__hamburger" id="hamburger" onclick="toggleSidebar()">
+            <i class="fa fa-bars"></i>
+        </button>
+    </header>
+
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+        <nav class="sidebar__nav">
+            <!-- Branding Section -->
+            <div class="sidebar__section sidebar__section--branding">
+                <h3 class="sidebar__heading">Branding</h3>
+                <ul class="sidebar__list">
+                    <li><a href="colours.html" class="sidebar__link sidebar__link--active">01 Colours</a></li>
+                    <li><a href="#" class="sidebar__link">02 Typography</a></li>
+                    <li><a href="#" class="sidebar__link">03 Logo</a></li>
+                </ul>
+            </div>
+
+            <!-- Utilities Section -->
+            <div class="sidebar__section sidebar__section--utilities">
+                <h3 class="sidebar__heading">Utilities</h3>
+                <ul class="sidebar__list">
+                    <li><a href="#" class="sidebar__link">04 Spacing</a></li>
+                    <li><a href="#" class="sidebar__link">05 Containers</a></li>
+                    <li><a href="#" class="sidebar__link">06 Images</a></li>
+                    <li><a href="#" class="sidebar__link">07 Interactive</a></li>
+                    <li><a href="#" class="sidebar__link">08 Feedback</a></li>
+                </ul>
+            </div>
+
+            <!-- Navigation Section -->
+            <div class="sidebar__section sidebar__section--navigation">
+                <h3 class="sidebar__heading">Navigation</h3>
+                <ul class="sidebar__list">
+                    <li><a href="#" class="sidebar__link">09 Navbars</a></li>
+                    <li><a href="#" class="sidebar__link">10 Breadcrumbs</a></li>
+                    <li><a href="#" class="sidebar__link">11 Pagination</a></li>
+                </ul>
+            </div>
+
+            <!-- Blocks Section -->
+            <div class="sidebar__section sidebar__section--blocks">
+                <h3 class="sidebar__heading">Blocks</h3>
+                <ul class="sidebar__list">
+                    <li><a href="#" class="sidebar__link">12 Hero</a></li>
+                    <li><a href="#" class="sidebar__link">13 Carousel</a></li>
+                    <li><a href="#" class="sidebar__link">14 Stats</a></li>
+                    <li><a href="#" class="sidebar__link">15 Footer</a></li>
+                </ul>
+            </div>
+
+            <!-- Components Section -->
+            <div class="sidebar__section sidebar__section--components">
+                <h3 class="sidebar__heading">Components</h3>
+                <ul class="sidebar__list">
+                    <li><a href="#" class="sidebar__link">16 Cards</a></li>
+                    <li><a href="#" class="sidebar__link">17 Forms</a></li>
+                    <li><a href="#" class="sidebar__link">18 Accordion</a></li>
+                    <li><a href="#" class="sidebar__link">19 Lists</a></li>
+                </ul>
+            </div>
+        </nav>
+    </aside>
+
+    <main class="main-content">
+        <div class="color-swatches">
+            <h2>Main Colors for text</h2>
+            <div class="swatch-container">
+                <div class="swatch primary-text" style="background-color: var(--clr-white); color: var(--clr-primary);">
+                    <p>Class: .primary-text</p>
+                    <p>Hex: #000000</p>
+                    <p>Uses: Headings, Body Text</p>
+                    <p>Contrast Ratio with .bg-white: Pass (21:1)</p>
+                </div>
+                <div class="swatch secondary-text" style="background-color: var(--clr-white); color: var(--clr-secondary);">
+                    <p>Class: .secondary-text</p>
+                    <p>Hex: #4D4D4D</p>
+                    <p>Uses: Secondary Text, Borders</p>
+                    <p>Contrast Ratio with .bg-white: Pass (8.45:1)</p>
+                </div> 
+            </div>
+
+            <h2>Grayscale Tones</h2>
+            <div class="swatch-container">
+                <div class="swatch bg-light" style="color: var(--clr-dark);">
+                    <p>Class: .bg-light</p>
+                    <p>Hex: #C2C2C2</p>
+                    <p>Uses: Backgrounds, Disabled States</p>
+                    <p>Contrast Ratio with .text-dark: Pass (9.77:1)</p>
+                </div>
+                <div class="swatch bg-medium" style="color: var(--clr-white);">
+                    <p>Class: .bg-medium</p>
+                    <p>Hex: #666666</p>
+                    <p>Uses: Medium Emphasis Text</p>
+                    <p>Contrast Ratio with .text-light: Pass (5.74:1)</p>
+                </div>
+                <div class="swatch bg-dark" style="color: var(--clr-white);">
+                    <p>Class: .bg-dark</p>
+                    <p>Hex: #1A1A1A</p>
+                    <p>Uses: High Emphasis Text, Foreground Elements</p>
+                    <p>Contrast Ratio with .text-light: Pass (17.4:1)</p>
+                </div>
+            </div>
+
+            <h2>Tonal Variations</h2>
+            <div class="swatch-container">
+                <div class="swatch bg-primary-100" style="color: var(--clr-muted);">
+                    <p>Class: .bg-primary-100</p>
+                    <p>Hex: #333333</p>
+                    <p>Uses: Subtle text elements</p>
+                    <p>Contrast Ratio with .text-dark: Pass (7.14:1)</p>
+                </div>
+                <div class="swatch bg-primary-700" style="color: var(--clr-white);">
+                    <p>Class: .bg-primary-700</p>
+                    <p>Hex: #000000</p>
+                    <p>Uses: call-to-action text</p>
+                    <p>Contrast Ratio with .text-light: Pass (21:1)</p>
+                </div>
+                <div class="swatch bg-accent-100" style="color: var(--clr-dark);">
+                    <p>Class: .bg-accent-100</p>
+                    <p>Hex: #3367D6</p>
+                    <p>Uses: Highlighted or interactive elements</p>
+                    <p>Contrast Ratio with .text-dark: Fail (3.35:1)</p>
+                </div>
+                <div class="swatch bg-accent-700" style="color: var(--clr-white);">
+                    <p>Class: .bg-accent-700</p>
+                    <p>Hex: #7523AF</p>
+                    <p>Uses: Emphasized text or buttons</p>
+                    <p>Contrast Ratio with .text-light: Pass (8.02:1)</p>
+                </div>
+            </div>
+
+           <h2>Vibrant UI Feedback Colors</h2>
+           <div class="swatch-container"></div>
+                <div class="swatch bg-primary-accent" style="color: var(--clr-white);">
+                    <p>Class: .bg-primary-accent</p>
+                    <p>Hex: #0056B3</p>
+                    <p>Uses: Primary buttons, links, or highlights.</p>
+                    <p>Contrast Ratio with .text-light: Pass (7.04:1)</p>
+                </div>
+                <div class="swatch bg-success" style="color: var(--clr-white);">
+                    <p>Class: .bg-success</p>
+                    <p>Hex: #186329</p>
+                    <p>Uses: Success Messages, Icons</p>
+                    <p>Contrast Ratio with .text-light: Pass (7.35:1)</p>
+                </div>
+                <div class="swatch bg-info" style="color: var(--clr-white);">
+                    <p>Class: .bg-info</p>
+                    <p>Hex: #0E606C</p>
+                    <p>Uses: Information Alerts, Progress Bars</p>
+                    <p>Contrast Ratio with .text-light: Pass (7.22:1)</p>
+                </div>
+                <div class="swatch bg-warning" style="color: var(--clr-dark);">
+                    <p>Class: .bg-warning</p>
+                    <p>Hex: #FFC107</p>
+                    <p>Uses: Warnings, Caution Notices</p>
+                    <p>Contrast Ratio with .text-dark: pass (10.67:1)</p>
+                </div>
+                <div class="swatch bg-danger" style="color: var(--clr-white);">
+                    <p>Class: .bg-danger</p>
+                    <p>Hex: #A91E2C</p>
+                    <p>Uses: Error Messages, Critical Alerts</p>
+                    <p>Contrast Ratio with .text-light: Pass (7.21:1)</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="design-system.js"></script>
+    
+</body>
+</html>
