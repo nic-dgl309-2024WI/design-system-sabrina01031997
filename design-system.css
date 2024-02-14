@@ -62,7 +62,7 @@
 
 /* Styles for the brand link */
 .navbar__brand-link {
-    color: var(--clr-primary); /* Black for text */
+    color: var(--clr-primary-accent); /* Black for text */
     text-decoration: none;
     font-weight: bold; 
     font-size: 1.5em;
@@ -73,11 +73,16 @@
     display: flex;
 }
 
+.navbar__brand {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
 /* Styles for menu links */
 .navbar__menu-link {
     color: var(--clr-dark); /* Darker grey for text */
     text-decoration: none;
-    padding: 0.5em 1em;
     font-size: 20px;  
 }
 
@@ -148,7 +153,6 @@
 
 .main-content, .sidebar {
     max-height: 100vh; /* Set maximum height to viewport height */
-    overflow-y: hidden; /* Hide vertical scrollbar */
 }
 
 /*-------- Styles for color swatches for the page Colours.html--------*/
@@ -158,7 +162,7 @@
 
 .swatch-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid layout */
+    grid-template-columns: 1fr; /* Single column */
     gap: 1em; /* Gap between swatches */
 }
 
@@ -261,6 +265,72 @@
     color: var(--clr-white); /* White text color */
 }
 
+.navbar__menu {
+    flex-direction: row;
+}
+
+/*......typography..........*/
+/* Font Variables */
+:root {
+    /* Font Families */
+    --font-family-heading: 'Montserrat', sans-serif;
+    --font-family-body: 'Roboto', sans-serif;
+  
+    /* Font Sizes */
+    --font-size-base: 16px; /* Base font size */
+    --font-size-lg: 24px; /* Large font size */
+    --font-size-sm: 14px; /* Small font size */
+  
+    /* Font Weights */
+    --font-weight-light: 300;
+    --font-weight-normal: 400;
+    --font-weight-bold: 700;
+  
+    /* Line Heights */
+    --line-height-base: 1.5;
+    --line-height-tight: 1.2;
+  
+    /* Letter-Spacing */
+    --letter-spacing-normal: normal;
+    --letter-spacing-wide: 0.05em;
+  }
+  
+  /* Utility Classes for Typography */
+  .font-heading {
+    font-family: var(--font-family-heading);
+    font-weight: var(--font-weight-bold);
+    line-height: var(--line-height-tight);
+  }
+  
+  .font-body {
+    font-family: var(--font-family-body);
+    font-weight: var(--font-weight-normal);
+    line-height: var(--line-height-base);
+  }
+  
+  .text-lg {
+    font-size: var(--font-size-lg);
+  }
+  
+  .text-sm {
+    font-size: var(--font-size-sm);
+  }
+  
+  .font-bold {
+    font-weight: var(--font-weight-bold);
+  }
+  
+  .letter-spacing-wide {
+    letter-spacing: var(--letter-spacing-wide);
+  }
+  
+  /* CSS Reset including Border Box Fix */
+  *{
+    box-sizing: border-box; 
+    margin: 0; 
+    padding: 0; 
+  }
+
 /* Responsive Design for Mobile */
 /* Hamburger menu on mobile */
 @media (max-width: 768px) {
@@ -269,7 +339,10 @@
     }
 
     .navbar__menu {
-        display: none; /* Hide the menu in the navbar */
+        flex-direction: column;
+    }
+    .navbar__brand {
+        display: block;
     }
 
     .sidebar {
@@ -289,11 +362,12 @@
         width: 100%; 
         background-color: var(--clr-shadow); 
     }
+
     /* Adjust padding as needed */
     .sidebar.open .navbar__menu .navbar__menu-link {
         padding: 0.5em 1em; 
     }
-    
+
     /* Show the sidebar */
     .sidebar.open {
         left: 0; 
@@ -303,11 +377,10 @@
     .main-content {
         margin-left: 0;
     }
-
     .sidebar__close-button {
         display: none; /* Hide by default */
     }
-    
+
     .sidebar.open .sidebar__close-button {
         display: block; /* When the sidebar is open */
 

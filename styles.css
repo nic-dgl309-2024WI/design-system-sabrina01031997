@@ -50,6 +50,62 @@
 .alert-danger { background-color: var(--clr-danger); color: var(--clr-white); }
 .text-special { color: var(--clr-special); }
 
+
+/* ...................Typography ................*/
+/* Font Variables */
+:root {
+  /* Font Families */
+  --font-family-heading: 'Montserrat', sans-serif;
+  --font-family-body: 'Roboto', sans-serif;
+
+  /* Font Sizes */
+  --font-size-base: 16px; /* Base font size */
+  --font-size-lg: 24px; /* Large font size */
+  --font-size-sm: 14px; /* Small font size */
+
+  /* Font Weights */
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-bold: 700;
+
+  /* Line Heights */
+  --line-height-base: 1.5;
+  --line-height-tight: 1.2;
+
+  /* Letter-Spacing */
+  --letter-spacing-normal: normal;
+  --letter-spacing-wide: 0.05em;
+}
+
+/* Utility Classes for Typography */
+.font-heading {
+  font-family: var(--font-family-heading);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+}
+
+.font-body {
+  font-family: var(--font-family-body);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-base);
+}
+
+.text-lg {
+  font-size: var(--font-size-lg);
+}
+
+.text-sm {
+  font-size: var(--font-size-sm);
+}
+
+.font-bold {
+  font-weight: var(--font-weight-bold);
+}
+
+.letter-spacing-wide {
+  letter-spacing: var(--letter-spacing-wide);
+}
+
 /* CSS Reset including Border Box Fix */
 *{
   box-sizing: border-box; 
