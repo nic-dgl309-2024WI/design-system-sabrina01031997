@@ -133,3 +133,294 @@ ol
 li {
   padding: 0; 
 }
+
+/* Spacing utility classes using the BEM naming convention */
+
+/* Margins */
+.l-mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Margins for 1rem */
+.l-m {
+  margin: 1rem; /* 1rem on all sides */
+}
+
+.l-mt-1 {
+  margin-top: 1rem; 
+}
+
+.l-mb-1 {
+  margin-bottom: 1rem; 
+}
+
+.l-ml-1 {
+  margin-left: 1rem; 
+}
+
+.l-mr-1 {
+  margin-right: 1rem; 
+}
+
+.l-mx-1 {
+  margin-left: 1rem;
+  margin-right: 1rem; 
+}
+
+.l-my-1 {
+  margin-top: 1rem;
+  margin-bottom: 1rem; 
+}
+
+/* Margins for 1.25rem */
+.l-m-1-25 {
+  margin: 1.25rem; /* 1.25rem on all sides */
+}
+
+.l-mt-1-25 {
+  margin-top: 1.25rem;
+}
+
+.l-mb-1-25 {
+  margin-bottom: 1.25rem;
+}
+
+.l-ml-1-25 {
+  margin-left: 1.25rem;
+}
+
+.l-mr-1-25 {
+  margin-right: 1.25rem;
+}
+
+.l-mx-1-25 {
+  margin-left: 1.25rem;
+  margin-right: 1.25rem;
+}
+
+.l-my-1-25 {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+/* Padding for 1rem */
+.l-p {
+  padding: 1rem; /* 1rem on all sides */
+}
+
+.l-pt-1 {
+  padding-top: 1rem; 
+}
+
+.l-pb-1 {
+  padding-bottom: 1rem; 
+}
+
+.l-pr-1 {
+  padding-right: 1rem; 
+}
+
+.l-pl-1 {
+  padding-left: 1rem; 
+}
+
+.l-px-1 {
+  padding-left: 1rem;
+  padding-right: 1rem; 
+}
+
+.l-py-1 {
+  padding-top: 1rem;
+  padding-bottom: 1rem; 
+}
+
+/* Paddings for 1.25rem */
+.l-p-1-25 {
+  padding: 1.25rem; /* 1.25rem on all sides */
+}
+
+.l-pt-1-25 {
+  padding-top: 1.25rem;
+}
+
+.l-pb-1-25 {
+  padding-bottom: 1.25rem;
+}
+
+.l-pl-1-25 {
+  padding-left: 1.25rem;
+}
+
+.l-pr-1-25 {
+  padding-right: 1.25rem;
+}
+
+.l-px-1-25 {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+.l-py-1-25 {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+
+/*Base Layout Classes*/
+
+/* Base layout classes for Flexbox */
+
+.l-flex {
+  display: flex;
+}
+
+.l-flex-column {
+  flex-direction: column;
+}
+
+.l-flex-row {
+  flex-direction: row;
+}
+
+.l-flex-wrap {
+  flex-wrap: wrap;
+}
+
+.l-flex-nowrap {
+  flex-wrap: nowrap;
+}
+
+.l-flex-justify-start {
+  justify-content: flex-start;
+}
+
+.l-flex-justify-end {
+  justify-content: flex-end;
+}
+
+.l-flex-justify-center {
+  justify-content: center;
+}
+
+.l-flex-justify-between {
+  justify-content: space-between;
+}
+
+.l-flex-justify-around {
+  justify-content: space-around;
+}
+
+.l-flex-align-start {
+  align-items: flex-start;
+}
+
+.l-flex-align-end {
+  align-items: flex-end;
+}
+
+.l-flex-align-center {
+  align-items: center;
+}
+
+.l-flex-align-stretch {
+  align-items: stretch;
+}
+
+.l-flex-align-baseline {
+  align-items: baseline;
+}
+
+/* Base layout classes for CSS Grid */
+.l-grid {
+  display: grid;
+}
+
+.l-grid-columns-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.l-grid-columns-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.l-grid-rows-2 {
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.l-grid-rows-3 {
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.l-grid-gap-1 {
+  gap: 1rem;
+}
+
+.l-grid-gap-2 {
+  gap: 2rem;
+}
+
+.l-grid-gap-3 {
+  gap: 3rem;
+}
+
+.l-grid-area-a {
+  grid-area: a;
+}
+
+.l-grid-area-b {
+  grid-area: b;
+}
+
+.l-grid-area-c {
+  grid-area: c;
+}
+
+.l-grid-align-center { 
+  justify-items: center; align-items: center; 
+}
+
+
+
+/* Mobile First: Default styles for mobile */
+.container {
+  width: 100%; /* Full width on mobile devices */
+  padding: 0 15px; /* Some padding to not touch the edges */
+}
+
+
+/*Container Classes*/
+
+/* Base container - mobile-first */
+.container {
+  width: 100%; 
+  max-width: 100%; 
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem; 
+  padding-right: 1rem; 
+}
+
+/* Constrained container for desktop */
+@media (min-width: 768px) { 
+  .container--desktop {
+    max-width: 1200px; 
+  }
+}
+
+/* Full-width container, overrides any max-width */
+.container--full-width {
+  width: 100%;
+  max-width: none; 
+}
+
+/* Example of additional container class as needed */
+.container--centered {
+  text-align: center; 
+}
+
+
+
+
+
+
+
