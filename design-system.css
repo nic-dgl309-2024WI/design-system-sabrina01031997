@@ -92,6 +92,16 @@
     margin-bottom: 1em;
 }
 
+.c-main-section {
+    flex-grow: 1;
+    /* Add padding or margins as necessary */
+  }
+  
+  /* Add this to ensure text inside main is aligned to the left */
+  .c-main-section div {
+    text-align: left;
+  }
+
 /* Styles for the main content area */
 .main-content {
     margin-left: 250px; /* Space for the sidebar */

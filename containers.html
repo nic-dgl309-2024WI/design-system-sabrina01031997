@@ -48,7 +48,7 @@
                 <h3 class="sidebar__heading font-heading">Utilities</h3>
                 <ul class="sidebar__list">
                     <li><a href="spacing.html" class="sidebar__link sidebar__link--active font-body">04 Spacing</a></li>
-                    <li><a href="#" class="sidebar__link sidebar__link--active font-body">05 Containers</a></li>
+                    <li><a href="containers.html" class="sidebar__link sidebar__link--active font-body">05 Containers</a></li>
                     <li><a href="#" class="sidebar__link sidebar__link--active font-body">06 Images</a></li>
                     <li><a href="#" class="sidebar__link sidebar__link--active font-body">07 Interactive</a></li>
                     <li><a href="#" class="sidebar__link sidebar__link--active font-body">08 Feedback</a></li>
@@ -88,6 +88,126 @@
             </div>
         </nav>
     </aside>
+
+    <main class="c-main l-padding-medium">
+        <div class="l-container l-margin-auto l-max-width-modified">
+            <h1 class="c-heading c-heading--large l-margin-y-3">Layout Containers</h1>
+    
+            <section class="l-margin-bottom-3">
+                <h2 class="c-subheading">Flexbox Class Definitions</h2>
+                <table class="c-table c-table--contrast u-border-collapse">
+                    <thead>
+                        <tr>
+                            <th class="u-border u-padding-y-1">Class Identifier</th>
+                            <th class="u-border u-padding-y-1">CSS Property</th>
+                            <th class="u-border u-padding-y-1">Assigned Value</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="u-border">.l-display-flex</td>
+                            <td class="u-border u-padding-y-1">display</td>
+                            <td class="u-border u-padding-y-1">inline-flex</td>
+                        </tr>
+                        <tr>
+                            <td class="u-border u-padding-y-1">.l-flex-direction--row</td>
+                            <td class="u-border u-padding-y-1">flex-direction</td>
+                            <td class="u-border u-padding-y-1">row-reverse</td>
+                        </tr>
+                        <tr>
+                            <td class="u-border u-padding-y-1">.l-flex-direction--column</td>
+                            <td class="u-border u-padding-y-1">flex-direction</td>
+                            <td class="u-border u-padding-y-1">column-reverse</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+    
+            <section>
+                <h2 class="c-subheading">Width Constraint Classes</h2>
+                <table class="c-table c-table--contrast u-border-collapse">
+                    <thead>
+                        <tr>
+                            <th class="u-border u-padding-y-1">Class Identifier</th>
+                            <th class="u-border u-padding-y-1">CSS Property</th>
+                            <th class="u-border u-padding-y-1">Assigned Value</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="u-border">.l-max-width--small-device</td>
+                            <td class="u-border u-padding-y-1">max-width</td>
+                            <td class="u-border u-padding-y-1">360px (Small Device)</td>
+                        </tr>
+                        <tr>
+                            <td class="u-border u-padding-y-1">.l-max-width--large-device</td>
+                            <td class="u-border u-padding-y-1">max-width</td>
+                            <td class="u-border u-padding-y-1">1080px (Large Device)</td>
+                        </tr>
+                        <tr>
+                            <td class="u-border u-padding-y-1">.l-width-fluid</td>
+                            <td class="u-border u-padding-y-1">width</td>
+                            <td class="u-border u-padding-y-1">auto</td>
+                        </tr>
+                        <tr>
+                            <td class="u-border u-padding-y-1">.l-desktop-width-custom</td>
+                            <td class="u-border u-padding-y-1">width</td>
+                            <td class="u-border u-padding-y-1">calc(100% - 320px)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Grid Layout Class Definitions Section -->
+        <section class="l-margin-bottom-3">
+            <h2 class="c-subheading">Grid Layout Class Definitions</h2>
+            <table class="c-table c-table--contrast u-border-collapse">
+                <thead>
+                    <tr>
+                        <th class="u-border u-padding-y-1">Class Identifier</th>
+                        <th class="u-border u-padding-y-1">CSS Property</th>
+                        <th class="u-border u-padding-y-1">Assigned Value</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="u-border">.l-grid-container</td>
+                        <td class="u-border u-padding-y-1">display</td>
+                        <td class="u-border u-padding-y-1">grid</td>
+                    </tr>
+                    <tr>
+                        <td class="u-border u-padding-y-1">.l-grid-template-columns</td>
+                        <td class="u-border u-padding-y-1">grid-template-columns</td>
+                        <td class="u-border u-padding-y-1">repeat(3, 1fr)</td>
+                    </tr>
+                    <tr>
+                        <td class="u-border u-padding-y-1">.l-grid-template-rows</td>
+                        <td class="u-border u-padding-y-1">grid-template-rows</td>
+                        <td class="u-border u-padding-y-1">repeat(2, 1fr)</td>
+                    </tr>
+                    <tr>
+                        <td class="u-border u-padding-y-1">.l-grid-gap</td>
+                        <td class="u-border u-padding-y-1">gap</td>
+                        <td class="u-border u-padding-y-1">20px</td>
+                    </tr>
+                    <tr>
+                        <td class="u-border u-padding-y-1">.l-grid-justify-items</td>
+                        <td class="u-border u-padding-y-1">justify-items</td>
+                        <td class="u-border u-padding-y-1">center</td>
+                    </tr>
+                    <tr>
+                        <td class="u-border u-padding-y-1">.l-grid-align-items</td>
+                        <td class="u-border u-padding-y-1">align-items</td>
+                        <td class="u-border u-padding-y-1">start</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        </div>
+    </main>
+    
+    
 
     <script src="design-system.js"></script>
     

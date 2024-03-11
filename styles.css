@@ -134,6 +134,14 @@ li {
   padding: 0; 
 }
 
+.c-main-section {
+  flex-grow: 1;
+}
+
+.c-main-section div {
+  text-align: left;
+}
+
 /* Spacing utility classes using the BEM naming convention */
 
 /* Margins */
