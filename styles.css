@@ -134,13 +134,65 @@ li {
   padding: 0; 
 }
 
-.c-main-section {
-  flex-grow: 1;
+
+
+/* Top Navbar Styles */
+.top-navbar {
+  background-color: #333;
+  padding: 10px 0;
 }
 
-.c-main-section div {
-  text-align: left;
+.top-navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
+
+.top-navbar ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+.top-navbar ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.top-navbar ul li a.active {
+  font-weight: bold;
+}
+
+/* Container and Spacing Styles */
+.l-container {
+  max-width: 960px; /* or whatever max-width you prefer */
+  margin: 0 auto;
+}
+
+.l-padding-vertical {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.l-margin-auto {
+  margin: auto;
+}
+
+.l-margin-y-auto {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Typography Styles */
+.c-heading--large {
+  font-size: 2rem;
+  color: #333; /* Adjust color as needed */
+}
+
+.c-heading--medium {
+  font-size: 1.5rem;
+  color: #333; /* Adjust color as needed */
+}
+
 
 /* Spacing utility classes using the BEM naming convention */
 
