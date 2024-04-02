@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design System Template</title>
+    <!-- Link of CSS files -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="design-system.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <!-- Top Navbar -->
+    <header class="navbar">
+        <div class="navbar__brand">
+            <div class="navbar__brand">
+                <a href="index.html" class="navbar__brand-link font-heading">Design System</a>
+            <div class="navbar__menu" id="navbarMenu">
+                <a href="about-me.html" class="navbar__menu-link font-body">About Me</a>
+                <a href="#" class="navbar__menu-link navbar__menu-link--active font-body">Demo Site</a>
+            </div>
+        </div>
+        
+        <!-- Hamburger button for mobile navbar -->
+        <button class="navbar__hamburger" id="hamburger" onclick="toggleSidebar()">
+            <i class="fa fa-bars"></i>
+        </button>
+    </header>
+
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+        <nav class="sidebar__nav">
+            <!-- Branding Section -->
+            <div class="sidebar__section sidebar__section--branding">
+                
+                <h3 class="sidebar__heading font-heading">Branding</h3>
+                <ul class="sidebar__list">
+                    <li><a href="colours.html" class="sidebar__link sidebar__link--active font-body">01 Colours</a></li>
+                    <li><a href="typography.html" class="sidebar__link sidebar__link--active font-body">02 Typography</a></li>
+                    <li><a href="#" class="sidebar__link sidebar__link--active font-body">03 Logo</a></li>
+                </ul>
+            </div>
+
+            <!-- Utilities Section -->
+            <div class="sidebar__section sidebar__section--utilities">
+                <h3 class="sidebar__heading font-heading">Utilities</h3>
+                <ul class="sidebar__list">
+                    <li><a href="spacing.html" class="sidebar__link sidebar__link--active font-body">04 Spacing</a></li>
+                    <li><a href="containers.html" class="sidebar__link sidebar__link--active font-body">05 Containers</a></li>
+                    <li><a href="#" class="sidebar__link sidebar__link--active font-body">06 Images</a></li>
+                    <li><a href="#" class="sidebar__link sidebar__link--active font-body">07 Interactive</a></li>
+                    <li><a href="#" class="sidebar__link sidebar__link--active font-body">08 Feedback</a></li>
+                </ul>
+            </div>
+
+            <!-- Navigation Section -->
+            <div class="sidebar__section sidebar__section--navigation">
+                <h3 class="sidebar__heading font-heading">Navigation</h3>
+                <ul class="sidebar__list">
+                    <li><a href="#" class="sidebar__link sidebar__link--active font-body ">09 Navbars</a></li>
+                    <li><a href="#" class="sidebar__link sidebar__link--active font-body">10 Breadcrumbs</a></li>
+                    <li><a href="#" class="sidebar__link sidebar__link--active font-body">11 Pagination</a></li>
+                </ul>
+            </div>
+
+            <!-- Blocks Section -->
+            <div class="sidebar__section sidebar__section--blocks">
+                <h3 class="sidebar__heading font-heading">Blocks</h3>
+                <ul class="sidebar__list">
+                    <li><a href="#" class="sidebar__link sidebar__link--active font-body">12 Hero</a></li>
+                    <li><a href="#" class="sidebar__link sidebar__link--active font-body">13 Carousel</a></li>
+                    <li><a href="#" class="sidebar__link sidebar__link--active font-body">14 Slats</a></li>
+                    <li><a href="#" class="sidebar__link sidebar__link--active font-body">15 Footer</a></li>
+                </ul>
+            </div>
+
+            <!-- Components Section -->
+            <div class="sidebar__section sidebar__section--components">
+                <h3 class="sidebar__heading font-heading">Components</h3>
+                <ul class="sidebar__list">
+                    <li><a href="#" class="sidebar__link sidebar__link--active font-body">16 Cards</a></li>
+                    <li><a href="#" class="sidebar__link sidebar__link--active font-body">17 Forms</a></li>
+                    <li><a href="#" class="sidebar__link sidebar__link--active font-body">18 Accordion</a></li>
+                    <li><a href="#" class="sidebar__link sidebar__link--active font-body">19 Lists</a></li>
+                </ul>
+            </div>
+        </nav>
+    </aside>
+
+    <script src="design-system.js"></script>
+    
+</body>
+</html>
