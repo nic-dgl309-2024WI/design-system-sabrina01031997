@@ -539,38 +539,54 @@ img {
 /* ##########################
  Navigation Header
 ############################ */
+/* Mobile-first styles for navigation */
 .c-top-navbar {
   background-color: var(--primary-color);
-  color: var(--background-color);
-  padding: 1rem;
+  color: var(--text-color);
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.c-top-navbar__logo-container {
+  display: flex;
   align-items: center;
 }
 
 .c-top-navbar__logo {
-  width: 150px; /* Logo width */
+  height: 50px;
 }
 
+/* Hide the nav links and only show the hamburger menu on mobile */
 .c-top-navbar__nav {
-  display: flex;
-}
-
-.c-top-navbar__nav-item {
-  padding: 0.5rem 1rem;
-  color: var(--background-color);
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.c-top-navbar__nav-item:hover,
-.c-top-navbar__nav-item--active {
-  text-decoration: underline;
-  background-color: var(--secondary-color);
+  display: none;
 }
 
 .c-top-navbar__hamburger {
-  display: none; /* Displayed on mobile */
+  display: block; /* Show the hamburger menu */
+}
+
+/* When the nav is active, display the links as a column */
+.c-top-navbar__nav.active {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 60px; /* Height of the nav bar */
+  width: 100%;
+  background-color: var(--primary-color);
+  text-align: left;
+}
+
+.c-top-navbar__nav-item {
+  padding: 1rem; /* More padding for tap targets */
+}
+
+/* Style for the close button (X) */
+.c-top-navbar__close {
+  font-size: 2rem;
+  text-align: right;
+  padding: 1rem;
 }
 
 /* ##########################
@@ -942,7 +958,7 @@ img {
   }
 
   .c-footer__socials {
-      margin-top: 0; /* Adjust top margin */
+      margin-top: 0; /* Adjustable top margin */
   }
 }
 

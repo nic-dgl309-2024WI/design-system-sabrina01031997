@@ -8,28 +8,22 @@
 </head>
 <body>
 
-<!-- Top Navigation Bar -->
-<header class="c-top-navbar">
-    <div class="c-top-navbar__logo">
-        <img src="logo.png" alt="Outback Nursery Logo" class="c-logo-img">
-    </div>
-    <!-- Navigation Links for Mobile and Desktop -->
-    <nav class="c-top-navbar__nav">
-        <!-- Hamburger Menu for Mobile -->
-        <button class="c-top-navbar__hamburger" aria-label="Toggle navigation">
-            <!-- Icon code -->
-        </button>
-        <!-- Desktop Navigation -->
-        <ul class="c-top-navbar__list u-no-style-link">
-            <li class="c-top-navbar__item"><a href="#home" class="c-top-navbar__link">Home</a></li>
-            <li class="c-top-navbar__item"><a href="#products" class="c-top-navbar__link">Products</a></li>
-            <li class="c-top-navbar__item"><a href="#services" class="c-top-navbar__link">Services</a></li>
-            <li class="c-top-navbar__item"><a href="#resources" class="c-top-navbar__link">Resources</a></li>
-            <li class="c-top-navbar__item"><a href="#aboutus" class="c-top-navbar__link">About Us</a></li>
-            <li class="c-top-navbar__item"><a href="contact" class="c-top-navbar__link">Contact</a></li>
 
-            <!-- Add other navigation items here -->
-        </ul>
+<!-- Navigation Header -->
+<header class="c-top-navbar">
+    <div class="c-top-navbar__logo-container">
+        <img src="logo.png" alt="Outback Nursery Logo" class="c-top-navbar__logo">
+    </div>
+    <!-- Hamburger Menu (for mobile) -->
+    <div class="c-top-navbar__hamburger" onclick="toggleMenu()">☰</div>
+    <!-- Navigation Links -->
+    <nav class="c-top-navbar__nav" id="navbarNav">
+        <a href="#" class="c-top-navbar__nav-item">Home</a>
+        <a href="#" class="c-top-navbar__nav-item">Products</a>
+        <a href="#" class="c-top-navbar__nav-item">Services</a>
+        <a href="#" class="c-top-navbar__nav-item">Resources</a>
+        <a href="#" class="c-top-navbar__nav-item">About Us</a>
+        <a href="#" class="c-top-navbar__nav-item">Contact</a>
     </nav>
 </header>
 
