@@ -612,7 +612,20 @@ color: var(--text-color);
 .c-hero-container__title {
 font-size: 2.5rem;
 margin-bottom: 1rem;
+display: flex;
+flex-direction: column;
+justify-content: center; /* Center vertically */
+align-items: center; /* Center horizontally */
+height: 100vh; /* Make it full height of the viewport */
+text-align: center; /* Center the text itself */
 }
+
+.c-hero-container__subtitle {
+    text-align: center; /* Centers the text horizontally */
+    margin: 0 auto; /* Adds automatic margins on both sides to help with horizontal centering */
+    display: block; /* Ensures the element is treated as a block for margin auto to work */
+  }
+  
 
 .c-hero-container__cta {
 background-color: var(--secondary-color);
