@@ -487,6 +487,7 @@ text-align: center;
 :root {
 --primary-color: #4CAF50; /* Adjust to your primary brand color */
 --secondary-color: #FFC107; /* Adjust to your secondary brand color */
+--clr-danger: #A91E2C; /* Red */
 --text-color: #000000; /* Standard text color */
 --background-color: #ffffff; /* Background color of the site */
 --font-family: 'Arial', sans-serif; /* Primary font for the website */
@@ -589,9 +590,9 @@ font-size: 20px;
 
 /* Add hover effect on nav links */
 .c-top-navbar__nav-item:hover {
-  text-decoration: none;
-  color: var(--secondary-color); /* Changes color on hover */
-  background-color: var(--highlight-color); /* Optional: add a background color on hover I if desired */
+text-decoration: none;
+color: var(--secondary-color); /* Changes color on hover */
+background-color: var(--highlight-color); /* Optional: add a background color on hover I if desired */
 }
 
 /* Style for the close button (X) */
@@ -632,23 +633,27 @@ text-align: center; /* Centers the text horizontally */
 margin-bottom: 20px; /* Adds automatic margins on both sides to help with horizontal centering */
 display: block; /* Ensures the element is treated as a block for margin auto to work */
 }
-  
 
 .c-hero-container__cta {
-background-color: var(--secondary-color);
-color: var(--text-color);
-padding: 1rem 2rem;
-border-radius: 5px;
-text-decoration: none;
+background-color:var(--secondary-color); /* Yellow background */
+color: #000; /* Text color */
+padding: 1rem 2rem; /* Top & Bottom, Left & Right padding */
+border: none; /* No border */
+width: 200px; /* Set a specific width */
 text-align: center;
-display: inline-block;
-cursor: pointer;
+border-radius: 5px; /* Fully rounded corners */
+text-decoration: none; /* No underline */
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Horizontal offset, vertical offset, blur radius, color */
+transition: background-color 0.3s, box-shadow 0.3s; /* Smooth transition for background color and shadow */
+display: inline-block; /* Allows the use of margin and width/height */
+cursor: pointer; /* Changes cursor to pointer on hover */
 }
 
 .c-hero-container__cta:hover {
-background-color: darken(var(--secondary-color), 10%);
+background-color: #FFD54F; /* Lighter yellow on hover */
+box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Larger shadow on hover */
 }
-
+      
 /* ##########################
 Featured Products Section
 ############################ */
@@ -660,6 +665,7 @@ background-color: #f9f9f9;
 .c-featured-products__title {
 font-size: 2rem;
 margin-bottom: 2rem;
+text-align: center;
 }
 
 .c-featured-products__grid {
@@ -708,6 +714,32 @@ display: block;
 background-color: darken(var(--primary-color), 10%);
 }
 
+.c-featured-products__cta-container {
+text-align: center; /* Centers inline/inline-block elements */
+padding: 40px 0; /* Add some vertical padding */
+}
+
+.c-featured-products__cta-button {
+background-color:var(--secondary-color); /* Yellow background */
+color: #000; /* Text color */
+padding: 1rem 2rem; /* Top & Bottom, Left & Right padding */
+border: none; /* No border */
+width: 200px; /* Set a specific width */
+
+border-radius: 5px; /* Fully rounded corners */
+text-decoration: none; /* No underline */
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Horizontal offset, vertical offset, blur radius, color */
+transition: background-color 0.3s, box-shadow 0.3s; /* Smooth transition for background color and shadow */
+display: inline-block; /* Allows the use of margin and width/height */
+cursor: pointer; /* Changes cursor to pointer on hover */
+}
+  
+.c-featured-products__cta-button:hover {
+background-color: #FFD54F; /* Lighter yellow on hover */
+box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Larger shadow on hover */
+}
+  
+
 /* ##########################
 Services Section Styles
 ############################ */
@@ -747,7 +779,7 @@ margin-bottom: 1rem;
 
 .c-services__card-desc {
 font-size: 1rem;
-margin-bottom: 2rem;
+margin-bottom: 3rem;
 }
 
 .c-services__card-cta {
