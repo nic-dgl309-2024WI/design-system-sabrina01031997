@@ -606,7 +606,7 @@ padding: 1rem;
 Hero Section
 ############################ */
 .c-hero-container {
-background: url('/path/to/hero-image.jpg') no-repeat center center / cover;
+background: url('images/backgroundimage.png') no-repeat center center / cover;
 padding: 4rem 1rem;
 color: var(--text-color); 
 display: flex;
@@ -617,7 +617,7 @@ text-align: center; /* This centers the text inside the container */
 }
 
 .c-hero-container__title {
-font-size: 2.5rem;
+font-size: 5.5rem;
 margin-bottom: 1rem;
 display: flex;
 flex-direction: column;
@@ -628,7 +628,7 @@ text-align: center; /* Center the text itself */
 }
 
 .c-hero-container__subtitle {
-font-size: 1.5rem;
+font-size: 2rem;
 text-align: center; /* Centers the text horizontally */
 margin-bottom: 20px; /* Adds automatic margins on both sides to help with horizontal centering */
 display: block; /* Ensures the element is treated as a block for margin auto to work */
@@ -671,7 +671,7 @@ text-align: center;
 .c-featured-products__grid {
 display: grid;
 grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-gap: 1rem;
+gap: 2.5rem;
 }
 
 .c-featured-products__card {
@@ -679,6 +679,7 @@ border: 1px solid #ddd;
 border-radius: 8px;
 overflow: hidden;
 transition: transform 0.3s ease;
+margin-bottom: 10px;
 }
 
 .c-featured-products__card:hover {
@@ -687,7 +688,7 @@ transform: translateY(-5px);
 
 .c-featured-products__image {
 width: 100%;
-height: 200px;
+height: 300px;
 object-fit: cover;
 }
 
