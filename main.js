@@ -16,3 +16,17 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+
+function toggleDetail(id) {
+    var detail = document.getElementById(id);
+    var button = detail.previousElementSibling.querySelector('.toggle-button');
+    
+    if (detail.style.display === "none") {
+        detail.style.display = "block";
+        button.textContent = '-';
+    } else {
+        detail.style.display = "none";
+        button.textContent = '+';
+    }
+}

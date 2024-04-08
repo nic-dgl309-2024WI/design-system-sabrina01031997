@@ -726,7 +726,6 @@ color: #000; /* Text color */
 padding: 1rem 2rem; /* Top & Bottom, Left & Right padding */
 border: none; /* No border */
 width: 200px; /* Set a specific width */
-
 border-radius: 5px; /* Fully rounded corners */
 text-decoration: none; /* No underline */
 box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Horizontal offset, vertical offset, blur radius, color */
@@ -744,6 +743,15 @@ box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Larger shadow on hover */
 /* ##########################
 Services Section Styles
 ############################ */
+
+/* Style for service card images */
+.c-services__image {
+width: 33%;
+height: 50%;
+object-fit: cover;
+border-radius: 10px;
+}
+  
 .c-services {
 padding: 4rem 1rem;
 background-color: #ffffff;
@@ -793,9 +801,32 @@ display: inline-block;
 cursor: pointer;
 }
 
-.c-services__card-cta:hover {
-background-color: darken(var(--primary-color), 10%);
+.c-services__cta-button {
+background-color:var(--secondary-color); /* Yellow background */
+color: #000; /* Text color */
+padding: 1rem 2rem; /* Top & Bottom, Left & Right padding */
+border: none; /* No border */
+width: 200px; /* Set a specific width */
+text-align: center;
+border-radius: 5px; /* Fully rounded corners */
+text-decoration: none; /* No underline */
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Horizontal offset, vertical offset, blur radius, color */
+transition: background-color 0.3s, box-shadow 0.3s; /* Smooth transition for background color and shadow */
+display: inline-block; /* Allows the use of margin and width/height */
+cursor: pointer; /* Changes cursor to pointer on hover */
 }
+
+.c-services__button-container {
+display: flex;
+justify-content: center;
+margin-top: 2rem; /* Adjust the margin as needed */
+}
+  
+.c-services__cta-button:hover {
+background-color: #FFD54F; /* Lighter yellow on hover */
+box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Larger shadow on hover */
+}
+
 
 /* ##########################
 Resources Section Styles
@@ -852,6 +883,65 @@ cursor: pointer;
 .c-resources__article-cta:hover {
 background-color: darken(var(--primary-color), 10%);
 }
+
+.gift-certificates-container {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background: #f9f9f9;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.gift-certificates-container h2 {
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.step {
+    margin-bottom: 1rem;
+}
+
+.detail {
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    background-color: #e7e7e7;
+    border-left: 3px solid #4caf50;
+    display: none; /* Hide details initially */
+}
+
+.toggle-button {
+    background-color:var(--secondary-color); /* Yellow background */
+    color: white;
+    border: none;
+    padding: 0.25rem 0.5rem;
+    margin-left: 0.5rem;
+    cursor: pointer;
+}
+
+.cta-button {
+background-color:var(--secondary-color); /* Yellow background */
+color: #000; /* Text color */
+padding: 1rem 2rem; /* Top & Bottom, Left & Right padding */
+border: none; /* No border */
+width: 200px; /* Set a specific width */
+text-align: center;
+border-radius: 5px; /* Fully rounded corners */
+text-decoration: none; /* No underline */
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Horizontal offset, vertical offset, blur radius, color */
+transition: background-color 0.3s, box-shadow 0.3s; /* Smooth transition for background color and shadow */
+display: inline-block; /* Allows the use of margin and width/height */
+cursor: pointer; /* Changes cursor to pointer on hover */
+}
+
+
+
+
+
+
+
+
+
 
 /* ##########################
 About Us Section Styles
