@@ -487,7 +487,7 @@ text-align: center;
 :root {
 --primary-color: #4CAF50; /* Adjust to your primary brand color */
 --secondary-color: #FFC107; /* Adjust to your secondary brand color */
---text-color: #333333; /* Standard text color */
+--text-color: #000000; /* Standard text color */
 --background-color: #ffffff; /* Background color of the site */
 --font-family: 'Arial', sans-serif; /* Primary font for the website */
 }
@@ -555,7 +555,7 @@ align-items: center;
 }
 
 .c-top-navbar__logo {
-height: 50px;
+height: 100px;
 }
 
 /* Hide the nav links and only show the hamburger menu on mobile */
@@ -583,14 +583,15 @@ text-align: left;
 .c-top-navbar__nav-item {
 padding: 1rem; /* More padding for tap targets */
 text-decoration: none; /* Removes underline from all nav links */
+color: var(--text-color);
 font-size: 20px;
 }
 
 /* Add hover effect on nav links */
 .c-top-navbar__nav-item:hover {
-  text-decoration: none; /* Ensures that the underline does not reappear on hover */
-  color: var(--secondary-color); /* Changes color on hover, choose your desired hover color */
-  background-color: var(--highlight-color); /* Optional: add a background color on hover if desired */
+  text-decoration: none;
+  color: var(--secondary-color); /* Changes color on hover */
+  background-color: var(--highlight-color); /* Optional: add a background color on hover I if desired */
 }
 
 /* Style for the close button (X) */
@@ -607,6 +608,11 @@ Hero Section
 background: url('/path/to/hero-image.jpg') no-repeat center center / cover;
 padding: 4rem 1rem;
 color: var(--text-color); 
+display: flex;
+flex-direction: column;
+justify-content: center; /* This centers the content vertically */
+align-items: center; /* This centers the content horizontally */
+text-align: center; /* This centers the text inside the container */
 }
 
 .c-hero-container__title {
@@ -616,15 +622,16 @@ display: flex;
 flex-direction: column;
 justify-content: center; /* Center vertically */
 align-items: center; /* Center horizontally */
-height: 100vh; /* Make it full height of the viewport */
+height: 50vh; /* Make it full height of the viewport */
 text-align: center; /* Center the text itself */
 }
 
 .c-hero-container__subtitle {
-    text-align: center; /* Centers the text horizontally */
-    margin: 0 auto; /* Adds automatic margins on both sides to help with horizontal centering */
-    display: block; /* Ensures the element is treated as a block for margin auto to work */
-  }
+font-size: 1.5rem;
+text-align: center; /* Centers the text horizontally */
+margin-bottom: 20px; /* Adds automatic margins on both sides to help with horizontal centering */
+display: block; /* Ensures the element is treated as a block for margin auto to work */
+}
   
 
 .c-hero-container__cta {
@@ -633,6 +640,7 @@ color: var(--text-color);
 padding: 1rem 2rem;
 border-radius: 5px;
 text-decoration: none;
+text-align: center;
 display: inline-block;
 cursor: pointer;
 }
