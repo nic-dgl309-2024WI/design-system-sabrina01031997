@@ -17,7 +17,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-
 function toggleDetail(id) {
     var detail = document.getElementById(id);
     var button = detail.previousElementSibling.querySelector('.toggle-button');

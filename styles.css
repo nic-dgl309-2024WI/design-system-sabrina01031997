@@ -653,7 +653,7 @@ cursor: pointer; /* Changes cursor to pointer on hover */
 background-color: #FFD54F; /* Lighter yellow on hover */
 box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Larger shadow on hover */
 }
-    
+
 /* ##########################
 Featured Products Section
 ############################ */
@@ -868,20 +868,17 @@ box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Larger shadow on hover */
 /* Mobile styles with a media query */
 @media (max-width: 768px) {
 .c-services__image-container {
-/* Stack images vertically on mobile */
-flex-direction: column;
+flex-direction: column;/* Stack images vertically on mobile */
 }
 
 .c-services__image {
-/* Images fill the full width on mobile */
-width: 100%;
+width: 100%;/* Images fill the full width on mobile */
 margin-bottom: 20px; /* Remove margins to fill the width */
 }
 
 .c-services__name,
 .c-services__description {
-/* Text fills the full width and has some padding */
-width: 100%;
+width: 100%;/* Text fills the full width and has some padding */
 padding: 0 15px; /* Adjust padding to match your design */
 }
 .c-services__description {
@@ -891,9 +888,7 @@ margin-right: auto;
 width: 100%; /* You might want to set a specific width instead of 100% depending on your design */
 padding: 0 15px; /* Optional: add some padding on the sides */
 }
-
 }
-
 
 /* ##########################
 Resources Section Styles
@@ -933,6 +928,15 @@ max-height: 50%;
 display: block; /* removes any inline spacing */
 margin: 1rem auto; /* adds space above and below the image and centers it horizontally */
 border-radius: 10px; /* optional: rounds the corners */
+}
+
+
+@media (max-width: 768px) { /* This media query will target screens with a width of 768px or less */
+.c-resources__image {
+height: auto; 
+max-width: 100%;
+align-items: center;
+}
 }
 
 .c-resources__article:hover {
@@ -1090,7 +1094,7 @@ margin-bottom: 15px;
 .c-contact__form-submit {
 width: 100%;
 padding: 10px;
-border: none;
+
 border-radius: 4px;
 background-color: var(--primary-color);
 color: var(--background-color);
@@ -1105,15 +1109,33 @@ background-color: darken(var(--primary-color), 10%);
 .c-contact-us {
 display: flex;
 flex-wrap: wrap;
-justify-content: space-between;
+justify-content: space-around;
+align-items: stretch;
 padding: 50px;
 background-color: #f0f0f0; /* Example background color */
+
 }
 
-.c-contact-details, .c-contact-form {
+.map-container {
+border: 1px solid #ccc; /* Adds a border around the map */
+}
+
+/* Style adjustments for iframe */
+.map-container iframe {
+width: 100%; /* Makes the map take the full width of its container */
+height: 450px; /* Sets a fixed height for the map */
+}
+
+
+.c-contact-details, .c-contact-form, .map-container {
 flex: 1;
-min-width: 280px; /* Minimum width for smaller screens */
+width: 100%; /* Minimum width for smaller screens */
 padding: 20px;
+border: 1px solid #c4d7c5; /* Adjust color as necessary */
+margin-right: 30px; 
+margin-left: 30px;
+border-radius: 5px;
+background-color: #4caf4f38; /* Example background color */
 }
 
 .c-contact-form form {
@@ -1145,52 +1167,92 @@ border-radius: 4px;
 cursor: pointer;
 }
 
+/* Responsive Design */
+@media (max-width: 768px) {
+    .c-contact-us {
+      display: block; /* Stack the contact details and form */
+    }
+    
+    .c-contact-details,
+    .c-contact-form {
+      margin: auto; /* Center the block-level elements */
+      width: 100%; /* Set max-width to fit the screen size, you can adjust as needed */
+    }
+  
+  }
+  
+
 /* ##########################
 Footer Styles
 ############################ */
 .c-footer {
-background-color: var(--primary-color); /* Adjust the color to match your design */
-color: #FFFFFF;
+display: flex;
+justify-content: space-around;
+align-items: center;
+background-color:var(--primary-color); /* Adjust the color to match the example */
+color: white;
 padding: 20px 0;
+flex-wrap: wrap;
 }
 
-.c-footer-content {
+.c-footer-logo-section {
 display: flex;
-justify-content: space-between;
 align-items: center;
-max-width: 1200px;
-margin: 0 auto;
-padding: 0 15px;
-}
-
-.c-footer-section {
-display: flex;
-flex-direction: column;
-align-items: center;
+justify-content: flex-start; /* Align to the left side */
 }
 
 .c-footer-logo {
-margin-bottom: 10px;
-size: 10px;
+margin-left: auto; /* Pushes the logo to the right */
+margin-right: 20px; /* Adds some space on the right of the logo */
 }
 
-.c-footer-heading {
-font-weight: bold;
-}
-
-.c-footer-social {
-display: flex;
+.c-footer-logo {
+max-width: 100px; /* Adjust as needed */
+align-items: center;
 }
 
 .c-footer-social-link img {
-width: 30px; /* Adjust the size as needed */
-margin: 0 10px; /* Spacing between icons */
+width: 30px; /* Adjust as needed */
+margin: 0 5px;
 }
 
 .c-footer-bottom {
+width: 100%;
 text-align: center;
-padding-top: 20px; /* Spacing between main footer content and bottom text */
+margin-top: 20px; /* Adjust as needed */
+font-size: 0.75rem; /* Smaller font size */
 }
+
+.c-footer-info-section {
+margin-left: auto;
+margin-right: 20px; /* Or any value that gives you the desired spacing from the right edge */
+}
+
+.footer-hours {
+
+text-align: center; /* Center text within the element */
+width: 100%; /* Use the full width to center within the parent */
+}
+
+@media (max-width: 768px) {
+/* This targets the iframe within the .c-contact-us class for smaller screens */
+.c-contact-us iframe {
+width: 100% ;
+height: auto; /* Adjust height automatically */
+min-height: 50vh; /* Minimum height set to 50% of the viewport height */
+border: 0; /* Removes border */
+}
+.c-footer {
+flex-direction: column;
+}
+
+.c-footer-logo-section,
+.c-footer-social-section,
+.c-footer-info-section {
+margin-bottom: 10px;
+}
+}
+
 
 /* ##########################
 Media Queries for Larger Screens
@@ -1248,3 +1310,4 @@ padding: 2em 6em; /* Increased padding on larger screens */
 margin-top: 0; /* Adjustable top margin */
 }
 }
+
