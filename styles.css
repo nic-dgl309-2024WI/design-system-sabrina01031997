@@ -749,8 +749,8 @@ Services Section Styles
 height: 700%;
 object-fit: cover;
 border-radius: 10px;
-margin-right: 15px; /* Adjust the value as needed */
-margin-left: 15px; /* Adjust the value as needed */
+margin-right: 20px; /* Adjust the value as needed */
+margin-left: 20px; /* Adjust the value as needed */
 width: 40% ;/* Adjust width accounting for the margin */
 margin-bottom: 0; /* Reset margin-bottom if needed */
 }
@@ -812,27 +812,6 @@ padding: 20px; /* Add some padding for the text */
 text-align: center;
 }
 
-/* Mobile styles with a media query */
-@media (max-width: 768px) {
-.c-services__image-container {
-    /* Stack images vertically on mobile */
-    flex-direction: column;
-}
-
-.c-services__image {
-    /* Images fill the full width on mobile */
-    width: 100%;
-    margin-bottom: 20px; /* Remove margins to fill the width */
-}
-
-.c-services__name,
-.c-services__description {
-    /* Text fills the full width and has some padding */
-    width: 100%;
-    padding: 0 15px; /* Adjust padding to match your design */
-}
-}
-
 .c-services__card:hover {
 box-shadow: 0 8px 16px rgba(0,0,0,0.1);
 }
@@ -884,6 +863,35 @@ margin-top: 2rem; /* Adjust the margin as needed */
 .c-services__cta-button:hover {
 background-color: #FFD54F; /* Lighter yellow on hover */
 box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Larger shadow on hover */
+}
+
+/* Mobile styles with a media query */
+@media (max-width: 768px) {
+.c-services__image-container {
+/* Stack images vertically on mobile */
+flex-direction: column;
+}
+
+.c-services__image {
+/* Images fill the full width on mobile */
+width: 100%;
+margin-bottom: 20px; /* Remove margins to fill the width */
+}
+
+.c-services__name,
+.c-services__description {
+/* Text fills the full width and has some padding */
+width: 100%;
+padding: 0 15px; /* Adjust padding to match your design */
+}
+.c-services__description {
+text-align: center; /* Center the text */
+margin-left: auto; /* Combined with margin-right: auto, centers the block itself if it has a set width */
+margin-right: auto;
+width: 100%; /* You might want to set a specific width instead of 100% depending on your design */
+padding: 0 15px; /* Optional: add some padding on the sides */
+}
+
 }
 
 
