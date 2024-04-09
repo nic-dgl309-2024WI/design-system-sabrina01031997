@@ -915,6 +915,7 @@ background-color: #f9f9f9;
 border: 1px solid #ddd;
 border-radius: 8px;
 padding: 2rem;
+margin-bottom: 10px;
 text-align: left;
 display: flex;
 flex-direction: column;
@@ -1052,7 +1053,8 @@ border-radius: 10px; /* Optional: if you want rounded corners */
 display: flex; /* Use flexbox for layout */
 justify-content: center; /* Center horizontally */
 align-items: center; /* Center vertically (if needed) */
-padding: 20px; /* Add padding if needed */
+margin-top:30px;
+
 }
 
 /* ##########################
@@ -1060,7 +1062,7 @@ Contact Section Styles
 ############################ */
 .c-contact {
 padding: 4rem 1rem;
-background-color: #f9f9f9;
+
 }
 
 .c-contact__title {
@@ -1113,21 +1115,25 @@ justify-content: space-around;
 align-items: stretch;
 padding: 50px;
 background-color: #f0f0f0; /* Example background color */
-
+border-radius: 10px;
+margin-top: 10px;
 }
 
 .map-container {
-border: 1px solid #ccc; /* Adds a border around the map */
-}
+    width: 600px; /* or any fixed width you prefer */
+    height: 450px; /* or any fixed height you prefer */
+    border: 1px solid #ccc; /* existing style */
+    /* Remove margin if you don't need it */
+  }
+  
+  .map-container iframe {
+    width: 100%; /* ensures the iframe is responsive within the container */
+    height: 100%; /* ensures the iframe fills the container height */
+    border: 0; /* existing style */
+    /* Remove allowfullscreen, loading, and referrerpolicy attributes if they are not needed */
+  }
 
-/* Style adjustments for iframe */
-.map-container iframe {
-width: 100%; /* Makes the map take the full width of its container */
-height: 450px; /* Sets a fixed height for the map */
-}
-
-
-.c-contact-details, .c-contact-form, .map-container {
+.c-contact-details, .c-contact-form {
 flex: 1;
 width: 100%; /* Minimum width for smaller screens */
 padding: 20px;
