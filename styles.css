@@ -1,32 +1,32 @@
 /* Color Variables */
 :root {
-  /* Colors use for text with Adjusted Tones for Accessibility */
-  --clr-primary: #000000; /* Primary text color-Black */
-  --clr-secondary: #4D4D4D; /* Secondary text color-Adjusted Dark Grey for better contrast */
+/* Colors use for text with Adjusted Tones for Accessibility */
+--clr-primary: #000000; /* Primary text color-Black */
+--clr-secondary: #4D4D4D; /* Secondary text color-Adjusted Dark Grey for better contrast */
 
-  /* Grayscale Tones */
-  --clr-light: #C2C2C2; /* Very Light Grey */
-  --clr-white: #FFFFFF; /* White */
-  --clr-dark: #333333; /* Darker Grey */
-  --clr-medium: #666666; /* Medium Grey */
-  --clr-muted: #A6A6A6; /* Muted Grey */
-  --clr-border: #CCCCCC; /* Border Grey */
-  --clr-shadow: #E0E0E0; /* Shadow Grey */
-  --clr-highlight: #FAFAFA; /* Highlight Grey */
+/* Grayscale Tones */
+--clr-light: #C2C2C2; /* Very Light Grey */
+--clr-white: #FFFFFF; /* White */
+--clr-dark: #333333; /* Darker Grey */
+--clr-medium: #666666; /* Medium Grey */
+--clr-muted: #A6A6A6; /* Muted Grey */
+--clr-border: #CCCCCC; /* Border Grey */
+--clr-shadow: #E0E0E0; /* Shadow Grey */
+--clr-highlight: #FAFAFA; /* Highlight Grey */
 
-  /* Vibrant Color Variables for UI Feedback */
-  --clr-primary-accent: #0056B3; /* Bright Blue */
-  --clr-success: #186329; /* Green */
-  --clr-info: #0E606C; /* Light Blue */
-  --clr-warning: #FFC107; /* Yellow */
-  --clr-danger: #A91E2C; /* Red */
-  --clr-special: #6C757D; /* Special Grey */
+/* Vibrant Color Variables for UI Feedback */
+--clr-primary-accent: #0056B3; /* Bright Blue */
+--clr-success: #186329; /* Green */
+--clr-info: #0E606C; /* Light Blue */
+--clr-warning: #FFC107; /* Yellow */
+--clr-danger: #A91E2C; /* Red */
+--clr-special: #6C757D; /* Special Grey */
 
-  /* Tonal Variations */
-  --clr-primary-100: #333333; /* Lighter version of Black */
-  --clr-primary-700: #000000; /* Darker version for high contrast */
-  --clr-accent-100: #3367D6; /* Lighter version of Accent */
-  --clr-accent-700: #7523af; /* Darker version of Accent */
+/* Tonal Variations */
+--clr-primary-100: #333333; /* Lighter version of Black */
+--clr-primary-700: #000000; /* Darker version for high contrast */
+--clr-accent-100: #3367D6; /* Lighter version of Accent */
+--clr-accent-700: #7523af; /* Darker version of Accent */
 }
 
 /* Utility Classes for Colors and Backgrounds */
@@ -463,7 +463,7 @@ padding-right: 1rem;
 /* Constrained container for desktop */
 @media (min-width: 768px) { 
 .container--desktop {
-  max-width: 1200px; 
+max-width: 1200px; 
 }
 }
 
@@ -482,7 +482,7 @@ text-align: center;
 /************************************************** OUTBACK NURSERY STYLESHEET*********************************************/
 
 /* ##########################
- Global Styles
+Global Styles
 ############################ */
 :root {
 --primary-color: #4CAF50; /* Adjust to your primary brand color */
@@ -653,7 +653,7 @@ cursor: pointer; /* Changes cursor to pointer on hover */
 background-color: #FFD54F; /* Lighter yellow on hover */
 box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Larger shadow on hover */
 }
-      
+    
 /* ##########################
 Featured Products Section
 ############################ */
@@ -733,12 +733,12 @@ transition: background-color 0.3s, box-shadow 0.3s; /* Smooth transition for bac
 display: inline-block; /* Allows the use of margin and width/height */
 cursor: pointer; /* Changes cursor to pointer on hover */
 }
-  
+
 .c-featured-products__cta-button:hover {
 background-color: #FFD54F; /* Lighter yellow on hover */
 box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Larger shadow on hover */
 }
-  
+
 
 /* ##########################
 Services Section Styles
@@ -746,12 +746,15 @@ Services Section Styles
 
 /* Style for service card images */
 .c-services__image {
-width: 33%;
-height: 50%;
+height: 700%;
 object-fit: cover;
 border-radius: 10px;
+margin-right: 15px; /* Adjust the value as needed */
+margin-left: 15px; /* Adjust the value as needed */
+width: 40% ;/* Adjust width accounting for the margin */
+margin-bottom: 0; /* Reset margin-bottom if needed */
 }
-  
+
 .c-services {
 padding: 4rem 1rem;
 background-color: #ffffff;
@@ -769,12 +772,65 @@ grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
 gap: 1rem;
 }
 
+/* CSS for Flex Container */
+.flex-container {
+display: flex; /* This establishes the flex context */
+justify-content: center; /* This centers the images horizontally */
+align-items: center; /* This centers the images vertically */
+gap: 35px; /* This adds space between the images */
+}
+
+/* CSS for Images inside the Flex Container */
+.flex-container img {
+max-width: 33%; /* This makes images responsive */
+height: auto; /* This maintains the aspect ratio */
+margin:10px;
+}
+
 .c-services__card {
 background-color: #f9f9f9;
 border: 1px solid #ddd;
 border-radius: 8px;
 padding: 2rem;
 text-align: center;
+background-color: #ffffff;
+margin-bottom: 50px;
+}
+
+.c-services__image-container {
+/* Ensuring the image container is a flexbox */
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.c-services__description {
+max-width: 100%; /* Adjust text width as necessary */
+margin-left: 20%;
+margin-right: 20%;
+padding: 20px; /* Add some padding for the text */
+text-align: center;
+}
+
+/* Mobile styles with a media query */
+@media (max-width: 768px) {
+.c-services__image-container {
+    /* Stack images vertically on mobile */
+    flex-direction: column;
+}
+
+.c-services__image {
+    /* Images fill the full width on mobile */
+    width: 100%;
+    margin-bottom: 20px; /* Remove margins to fill the width */
+}
+
+.c-services__name,
+.c-services__description {
+    /* Text fills the full width and has some padding */
+    width: 100%;
+    padding: 0 15px; /* Adjust padding to match your design */
+}
 }
 
 .c-services__card:hover {
@@ -789,6 +845,9 @@ margin-bottom: 1rem;
 .c-services__card-desc {
 font-size: 1rem;
 margin-bottom: 3rem;
+max-width: 400px; /* Adjust to your preference for text width */
+margin-left: 5rem; /* Adjust spacing between image and text */
+padding: 1rem; /* Add padding if needed */
 }
 
 .c-services__card-cta {
@@ -821,7 +880,7 @@ display: flex;
 justify-content: center;
 margin-top: 2rem; /* Adjust the margin as needed */
 }
-  
+
 .c-services__cta-button:hover {
 background-color: #FFD54F; /* Lighter yellow on hover */
 box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Larger shadow on hover */
@@ -854,6 +913,18 @@ border: 1px solid #ddd;
 border-radius: 8px;
 padding: 2rem;
 text-align: left;
+display: flex;
+flex-direction: column;
+justify-content: center;
+text-align: center; /* This will center the text horizontally */
+}
+
+.c-resources__image {
+max-width: 33%; /* ensures the image is responsive and doesn't overflow its container */
+max-height: 50%;
+display: block; /* removes any inline spacing */
+margin: 1rem auto; /* adds space above and below the image and centers it horizontally */
+border-radius: 10px; /* optional: rounds the corners */
 }
 
 .c-resources__article:hover {
@@ -865,9 +936,12 @@ font-size: 1.75rem;
 margin-bottom: 1rem;
 }
 
-.c-resources__article-desc {
+.c-resources__description {
 font-size: 1rem;
 margin-bottom: 2rem;
+max-width: 100%; /* Adjust text width as necessary */
+margin-left: 20%;
+margin-right: 20%;
 }
 
 .c-resources__article-cta {
@@ -885,38 +959,38 @@ background-color: darken(var(--primary-color), 10%);
 }
 
 .gift-certificates-container {
-    max-width: 600px;
-    margin: 2rem auto;
-    padding: 1rem;
-    background: #f9f9f9;
-    border-radius: 8px;
-    text-align: center;
+max-width: 600px;
+margin: 2rem auto;
+padding: 1rem;
+background: #f9f9f9;
+border-radius: 8px;
+text-align: center;
 }
 
 .gift-certificates-container h2 {
-    margin-bottom: 1rem;
-    color: #333;
+margin-bottom: 1rem;
+color: #333;
 }
 
 .step {
-    margin-bottom: 1rem;
+margin-bottom: 1rem;
 }
 
 .detail {
-    margin-top: 0.5rem;
-    padding: 0.5rem;
-    background-color: #e7e7e7;
-    border-left: 3px solid #4caf50;
-    display: none; /* Hide details initially */
+margin-top: 0.5rem;
+padding: 0.5rem;
+background-color: #e7e7e7;
+border-left: 3px solid #4caf50;
+display: none; /* Hide details initially */
 }
 
 .toggle-button {
-    background-color:var(--secondary-color); /* Yellow background */
-    color: white;
-    border: none;
-    padding: 0.25rem 0.5rem;
-    margin-left: 0.5rem;
-    cursor: pointer;
+background-color:var(--secondary-color); /* Yellow background */
+color: white;
+border: none;
+padding: 0.25rem 0.5rem;
+margin-left: 0.5rem;
+cursor: pointer;
 }
 
 .cta-button {
@@ -934,15 +1008,6 @@ display: inline-block; /* Allows the use of margin and width/height */
 cursor: pointer; /* Changes cursor to pointer on hover */
 }
 
-
-
-
-
-
-
-
-
-
 /* ##########################
 About Us Section Styles
 ############################ */
@@ -958,10 +1023,24 @@ text-align: center;
 }
 
 .c-about-us__content {
-font-size: 1rem;
-margin-bottom: 2rem;
-line-height: 1.75;
-text-align: center;
+display: flex; /* Use flexbox for layout */
+align-items: center; /* Align items vertically */
+justify-content: space-around; /* Distribute space evenly */
+gap: 20px; /* Add some space between image and text */
+padding: 20px; /* Add padding around content */
+}
+
+.c-about-us__image {
+max-width: 50%; /* Adjust the size as needed */
+height: auto; /* Maintain aspect ratio */
+border-radius: 10px; /* Optional: if you want rounded corners */
+}
+
+.team-cta-container {
+display: flex; /* Use flexbox for layout */
+justify-content: center; /* Center horizontally */
+align-items: center; /* Center vertically (if needed) */
+padding: 20px; /* Add padding if needed */
 }
 
 /* ##########################
@@ -1015,104 +1094,149 @@ cursor: pointer;
 background-color: darken(var(--primary-color), 10%);
 }
 
+.c-contact-us {
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+padding: 50px;
+background-color: #f0f0f0; /* Example background color */
+}
+
+.c-contact-details, .c-contact-form {
+flex: 1;
+min-width: 280px; /* Minimum width for smaller screens */
+padding: 20px;
+}
+
+.c-contact-form form {
+display: flex;
+flex-direction: column;
+}
+
+.c-contact-form label {
+margin-top: 10px;
+}
+
+.c-contact-form input[type="text"],
+.c-contact-form input[type="email"],
+.c-contact-form textarea {
+width: 100%;
+padding: 10px;
+margin-top: 5px;
+border: 1px solid #ccc;
+border-radius: 4px;
+}
+
+.c-contact-form button[type="submit"] {
+background-color: #0056b3; /* Primary accent color */
+color: white;
+padding: 10px 20px;
+margin-top: 20px;
+border: none;
+border-radius: 4px;
+cursor: pointer;
+}
+
 /* ##########################
 Footer Styles
 ############################ */
 .c-footer {
-background-color: var(--primary-color);
-color: var(--background-color);
-padding: 2rem;
-text-align: center;
+background-color: var(--primary-color); /* Adjust the color to match your design */
+color: #FFFFFF;
+padding: 20px 0;
 }
 
-.c-footer__info {
-font-size: 1rem;
-margin-bottom: 1rem;
+.c-footer-content {
+display: flex;
+justify-content: space-between;
+align-items: center;
+max-width: 1200px;
+margin: 0 auto;
+padding: 0 15px;
 }
 
-.c-footer__nav {
-list-style: none;
+.c-footer-section {
+display: flex;
+flex-direction: column;
+align-items: center;
 }
 
-.c-footer__nav-item {
-display: inline-block;
-margin-right: 1rem;
+.c-footer-logo {
+margin-bottom: 10px;
+size: 10px;
 }
 
-.c-footer__nav-link {
-color: var(--background-color);
-text-decoration: none;
+.c-footer-heading {
 font-weight: bold;
 }
 
-.c-footer__nav-link:hover {
-text-decoration: underline;
+.c-footer-social {
+display: flex;
 }
 
-.c-footer__socials {
-margin-top: 1rem;
+.c-footer-social-link img {
+width: 30px; /* Adjust the size as needed */
+margin: 0 10px; /* Spacing between icons */
 }
 
-.c-footer__social-link {
-display: inline-block;
-margin-right: 1rem;
-color: var(--background-color);
-text-decoration: none;
+.c-footer-bottom {
+text-align: center;
+padding-top: 20px; /* Spacing between main footer content and bottom text */
 }
 
 /* ##########################
 Media Queries for Larger Screens
 ############################ */
 @media screen and (min-width: 1024px) {
-  .c-top-navbar__nav {
-      display: flex; /* Make navigation horizontal */
-      justify-content: center; /* Center navigation links */
-  }
+.c-top-navbar__nav {
+display: flex; /* Make navigation horizontal */
+justify-content: center; /* Center navigation links */
+}
 
-  .c-top-navbar__hamburger {
-      display: none; /* Hide hamburger menu on desktop */
-  }
+.c-top-navbar__hamburger {
+display: none; /* Hide hamburger menu on desktop */
+}
 
 /* Hero Section */
 .c-hero-container {
-    text-align: left;
-    padding: 4em 6em; /* Increased padding and aligned text to the left */
+text-align: left;
+padding: 4em 6em; /* Increased padding and aligned text to the left */
 }
 
 /* Featured Products Section */
 .c-featured-products__grid {
-    grid-template-columns: repeat(3, 1fr); /* 3 columns for larger screens */
+grid-template-columns: repeat(3, 1fr); /* 3 columns for larger screens */
 }
 
 /* Services Section */
 .c-services__list {
-    grid-template-columns: repeat(3, 1fr); /* 3 columns for services */
+grid-template-columns: repeat(3, 1fr); /* 3 columns for services */
 }
 
 /* Resources Section */
 .c-resources__list {
-    grid-template-columns: repeat(3, 1fr); /* 3 columns for resources */
+grid-template-columns: repeat(3, 1fr); /* 3 columns for resources */
 }
 
 /* About Us Section */
 .c-about-us__content {
-    max-width: 1024px; /* Max width for better reading on larger screens */
-    text-align: justify; /* Justified text for a cleaner look */
+max-width: 1024px; /* Max width for better reading on larger screens */
+text-align: justify; /* Justified text for a cleaner look */
 }
 
 /* Contact Section */
 .c-contact__form {
-    width: 50%; /* Narrower form for larger screens */
+width: 50%; /* Narrower form for larger screens */
 }
 
 /* Footer */
 .c-footer {
-    display: flex;
-    justify-content: space-between; /* Flexbox layout for footer */
-    padding: 2em 6em; /* Increased padding on larger screens */
+display: flex;
+justify-content: space-between; /* Flexbox layout for footer */
+padding: 2em 6em; /* Increased padding on larger screens */
 }
 
 .c-footer__socials {
-    margin-top: 0; /* Adjustable top margin */
+margin-top: 0; /* Adjustable top margin */
 }
 }
